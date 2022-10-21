@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .mySlides{
+            height: 30%;
+            width: 20%;
+            margin-left: 40%;
+            margin-top: 4%;
+        }
+        body{
+            background-color: rgba(209, 202, 202, 0.336);
+}
+        
+    </style>
+</head>
+
+<body>
+<div>
+    <img class="mySlides" src="/1st.jpg" alt="Not Found" >
+  <img class="mySlides" src="/2nd.jpg" alt="Not Found" >
+  <img class="mySlides" src="/3rd.jpg" alt="Not Found" >
+  <img class="mySlides" src="/4th.jpg" alt="Not Found" >
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 3000); 
+}
+</script>
+
+</body>
+</html>
